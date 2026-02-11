@@ -7,7 +7,7 @@ library(PMCMRplus)
 library(dplyr)
 library(scales)
 
-data <- read.csv(file = '/home/thais/Dev/R-scripts/best-ms.csv', sep = ',', header = T)
+data <- read.csv(file = '/home/thais/Dev/TVMBench/R-scripts/best-ms.csv', sep = ',', header = T)
 #data <- read.csv(file = '/home/thais/Dev/TVMBench/test', sep = ',', header = T)
 ggplot(data=data, aes(x=iteration, y=value, group=tipo, ymin=value-(2*desvio), ymax=value+(2*desvio), fill=tipo, color=tipo)) +
   geom_ribbon(alpha=.3, lty=0) +
@@ -32,7 +32,7 @@ ggplot(data=data, aes(x=iteration, y=value, group=tipo, ymin=value-(2*desvio), y
   scale_x_continuous(breaks = seq(0, 1000, 100))+
   scale_color_manual(values=c('#fc8d62', '#8da0cb', '#8dd1cd'), aesthetics = c("colour", "fill"))
 
-data <- read.csv(file = '/home/thais/Dev/R-scripts/acc-ms.csv', sep = ',', header = T)
+data <- read.csv(file = '/home/thais/Dev/TVMBench/R-scripts/acc-ms.csv', sep = ',', header = T)
 ggplot(data=data, aes(x=iteration, y=value, group=tipo, ymin=value-(2*desvio), ymax=value+(2*desvio), fill=tipo, color=tipo)) +
   geom_ribbon(alpha=.3, lty=0) +
   geom_line(size=1.5) +

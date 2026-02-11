@@ -7,8 +7,13 @@ library(PMCMRplus)
 library(dplyr)
 library(scales)
 
-data <- read.csv(file = '/home/thais/Dev/R-scripts/speedup.csv', sep = ',', header = T)
-data$approach <- factor(data$approach, levels = c("TVM-Ansor", "TVM-MetaSchedule", "TGC-Ansor", "TGC-MetaSchedule"))
+data <- read.csv(file = '/home/thais/Dev/TVMBench/R-scripts/speedup-ansor.csv', sep = ',', header = T)
+data$approach <- factor(data$approach, levels = c("TVM-Ansor", "TGC-Ansor"))
+
+
+data <- read.csv(file = '/home/thais/Dev/TVMBench/R-scripts/speedup-ms-cpu.csv', sep = ',', header = T)
+data$approach <- factor(data$approach, levels = c("TVM-MetaSchedule", "TGC-MetaSchedule"))
+
 
 ggplot(data=data, aes(x=model_name, y=tuning_mean, fill=approach))+
   geom_bar(stat="identity", color="black", position=position_dodge(), alpha=.9)+

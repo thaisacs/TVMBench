@@ -26,3 +26,4 @@ ggplot(data=data, aes(x=model_name, y=tuning_mean, fill=approach))+
   scale_fill_manual(values = c("#E07B39", "#4A4A4A", "#5C9E68", "#6194C2FF"))+ 
   #geom_hline(yintercept=1, linetype="dashed", size=.5, color = "black")+
   theme(legend.position="top", legend.title=element_blank())
+
