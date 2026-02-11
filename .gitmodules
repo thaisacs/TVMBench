@@ -1,0 +1,6 @@
+[submodule "TVM-Ansor-Bench"]
+	path = TVM-Ansor-Bench
+	url = git@github.com:thaisacs/TVM-Ansor-Bench.git
+[submodule "TVM-MetaSchedule-Bench"]
+	path = TVM-MetaSchedule-Bench
+	url = git@github.com:thaisacs/TVM-MetaSchedule-Bench.git
