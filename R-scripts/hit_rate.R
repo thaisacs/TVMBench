@@ -17,16 +17,14 @@ ggplot(data, aes(x=name, y=value, fill=tipo)) +
   theme(panel.background = element_rect(fill = 'white', colour = 'gray'),
         panel.grid.major = element_line(color = 'light gray'),
         panel.grid.minor = element_line(color = 'light gray'),
-        axis.text.y = element_text(size=14),
+        axis.text.y = element_text(size=30),
         legend.background = element_rect(fill=alpha('white', 0.6)))+
-  theme(axis.text.y  = element_text(size=14), 
-        axis.text.x=element_text(size=14, angle=45,hjust=.5,vjust=0.5),
-        plot.title   = element_text(size = 14),
-        legend.text  = element_text(size = 14),
-        axis.title.x = element_text(size = 14),
-        axis.title.y = element_text(size = 14))+
+  theme(axis.text.y  = element_text(size=30), 
+        axis.text.x=element_text(size=30, angle=45,hjust=.5,vjust=0.5),
+        plot.title   = element_text(size = 30),
+        legend.text  = element_text(size = 30),
+        axis.title.x = element_text(size = 30),
+        axis.title.y = element_text(size = 30))+
   labs(x="Deep Learning Model", y="Hit Ratio (%)")+
   geom_bar(stat = "identity", alpha=.9, position = "dodge", color="black")+
   scale_fill_manual(values = c("#66c2a5", "#fc8d62", "#8da0cb"))
-
-                               

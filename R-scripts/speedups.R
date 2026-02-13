@@ -14,6 +14,9 @@ data$approach <- factor(data$approach, levels = c("TVM-Ansor", "TGC-Ansor"))
 data <- read.csv(file = '/home/thais/Dev/TVMBench/R-scripts/speedup-ms-cpu.csv', sep = ',', header = T)
 data$approach <- factor(data$approach, levels = c("TVM-MetaSchedule", "TGC-MetaSchedule"))
 
+data <- read.csv(file = '/home/thais/Dev/TVMBench/R-scripts/speedup-ms-cuda.csv', sep = ',', header = T)
+data$approach <- factor(data$approach, levels = c("TVM-MetaSchedule", "TGC-MetaSchedule"))
+
 
 ggplot(data=data, aes(x=model_name, y=tuning_mean, fill=approach))+
   geom_bar(stat="identity", color="black", position=position_dodge(), alpha=.9)+
@@ -33,10 +36,11 @@ ggplot(data=data, aes(x=model_name, y=tuning_mean, fill=approach))+
   #scale_fill_manual(values = c("#ca0020", "#f4a582", "#bababa", "#404040"))+
   scale_fill_manual(values = c("#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3"))+
   #geom_hline(yintercept=1, linetype="dashed", size=.5, color = "black")+
-  theme(axis.text.y  = element_text(size=14), 
-        axis.text.x=element_text(size=14, angle=45,hjust=.5,vjust=0.5),
-        plot.title   = element_text(size = 14),
-        legend.text  = element_text(size = 14),
-        axis.title.x = element_text(size = 14),
-        axis.title.y = element_text(size = 14))+
+  theme(axis.text.y  = element_text(size=20), 
+        axis.text.x=element_text(size=20, angle=45,hjust=.5,vjust=0.5),
+        plot.title   = element_text(size = 20),
+        legend.text  = element_text(size = 20),
+        axis.title.x = element_text(size = 20),
+        axis.title.y = element_text(size = 20))+
   theme(legend.position="top", legend.title=element_blank())
+
