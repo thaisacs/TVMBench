@@ -7,13 +7,8 @@ library(PMCMRplus)
 library(dplyr)
 library(scales)
 
-data <- read.csv(file = '/home/thais/Dev/TVMBench/R-scripts/best-sequence.csv', sep = ',', header = T)
-#data <- read.csv(file = '/home/thais/Dev/TVMBench/test', sep = ',', header = T)
 
-data <- read.csv(file = '/home/thais/Dev/TVMBench/R-scripts/best-sequence.csv', sep = ',', header = T)
-
-/home/thais/Dev/TVMBench/R-scripts/50b.csv
-data <- read.csv(file = '/home/thais/Dev/TVMBench/R-scripts/1850b.csv', sep = ',', header = T)
+data <- read.csv(file = '/home/thais/Dev/TVMBench/R-scripts/50b.csv', sep = ',', header = T)
 #data <- read.csv(file = '/home/thais/Dev/TVMBench/R-scripts/50b.csv', sep = ',', header = T)
 
 data <- read.csv(file = '/home/thais/Dev/TVMBench/R-scripts/test.csv', sep = ',', header = T)
@@ -30,20 +25,16 @@ ggplot(data=data, aes(x=iteration, y=value, group=tipo, ymin=value-(desvio), yma
         panel.grid.minor = element_line(color = 'light gray'),
         legend.background = element_rect(fill=alpha('white', 0.6)))+
   #ggtitle('a) The best solution found in each search iteration (Error ribbons indicate ± 2 SEM)')+
-  theme(axis.text.y  = element_text(size=14), 
-        axis.text.x  = element_text(size=14),
-        plot.title   = element_text(size = 14),
-        legend.text  = element_text(size = 14),
-        axis.title.x = element_text(size = 14),
-        axis.title.y = element_text(size = 14))+
+  theme(axis.text.y  = element_text(size=20), 
+        axis.text.x  = element_text(size=20),
+        plot.title   = element_text(size = 20),
+        legend.text  = element_text(size = 20),
+        axis.title.x = element_text(size = 20),
+        axis.title.y = element_text(size = 20))+
   ggtitle('       Results Expressed as Mean ± Standard Error')+
   labs(x="Iteration", y="Normalized Execution Time")+
   scale_x_continuous(breaks = seq(0, 1000, 100))+
   scale_color_manual(values=c('#8da0cb', '#fc8d62', '#8dd1cd'), aesthetics = c("colour", "fill"))
-
-
-
-data <- read.csv(file = '/home/thais/Dev/TVMBench/R-scripts/1850.csv', sep = ',', header = T)
 
 data <- read.csv(file = '/home/thais/Dev/TVMBench/R-scripts/acc-sequence.csv', sep = ',', header = T)
 
@@ -58,17 +49,14 @@ ggplot(data=data, aes(x=iteration, y=value, group=tipo, ymin=value-(desvio), yma
         panel.grid.major = element_line(color = 'light gray'),
         panel.grid.minor = element_line(color = 'light gray'),
         legend.background = element_rect(fill=alpha('white', 0.6)))+
-  theme(axis.text.y  = element_text(size=14), 
-        axis.text.x  = element_text(size=14),
-        plot.title   = element_text(size=14),
-        legend.text  = element_text(size=14),
-        axis.title.x = element_text(size=14),
-        axis.title.y = element_text(size=14))+
+  theme(axis.text.y  = element_text(size=20), 
+        axis.text.x  = element_text(size=20),
+        plot.title   = element_text(size=20),
+        legend.text  = element_text(size=20),
+        axis.title.x = element_text(size=20),
+        axis.title.y = element_text(size=20))+
   labs(x="Iteration", y="Accumulated Normalized Execution Time")+
   #ggtitle('b) The compilation overhead in each search iteration (Error ribbons indicate ± 2 SEM)')+
   ggtitle('       Results Expressed as Mean ± Standard Error')+
   scale_x_continuous(breaks = seq(0, 1000, 100))+
   scale_color_manual(values=c('#8da0cb', '#fc8d62', '#8dd1cd'), aesthetics = c("colour", "fill"))
-
-
-
