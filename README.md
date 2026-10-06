@@ -15,6 +15,7 @@ Task Graph Caching (TGC) is an algorithm proposed for Apache TVM's auto-tuning p
 To install the required dependencies for TGC, execute the following commands:
 ```
 # Load CUDA module
+ml gcc/13.4.0
 ml cuda/12.6.3
 
 # Create and activate virtual environment
